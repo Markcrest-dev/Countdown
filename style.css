@@ -1,0 +1,127 @@
+* {
+  padding: 0;  
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 4%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+.logo {
+  width: clamp(100px, 15vw, 150px);
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 1000;
+  color: #000;
+  margin-bottom: clamp(25px, 5vh, 50px);
+}
+
+.content h1 img {
+  width: clamp(40px, 8vw, 80px);
+  margin-top: 7px;
+}
+
+.content button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px 25px;
+  color: #fff;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.content a img {
+  width: clamp(40px, 8vw, 80px);
+  margin: 7px 25px;
+  transition: transform 0.3s ease;
+}
+
+.content a img:hover {
+  transform: scale(1.1);
+}
+
+.launch-time {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 30px);
+  flex-wrap: wrap;
+}
+
+.launch-time div {
+  flex: 0 1 clamp(80px, 15vw, 100px);
+  text-align: center;
+}
+
+.launch-time div p {
+  font-size: clamp(36px, 8vw, 60px);
+  margin-bottom: -7px;
+}
+
+.launch-time div span {
+  font-size: clamp(14px, 3vw, 18px);
+}
+
+.arbp {
+  width: clamp(300px, 40vw, 600px);
+  position: absolute;
+  right: 5%;
+  top: 100px;
+  animation: arbp 4s linear infinite;
+}
+
+@keyframes arbp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .arbp {
+    opacity: 0.3;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .content {
+    z-index: 1;
+  }
+}
+

@@ -96,11 +96,11 @@ body {
 }
 
 .arbp {
-  width: clamp(300px, 40vw, 600px);
+  width: clamp(200px, 50vw, 400px);
   position: absolute;
-  right: 5%;
-  top: 100px;
-  animation: arbp 4s linear infinite;
+  right: 3%;
+  top: 80px;
+  animation: arbp 7s linear infinite;
 }
 
 @keyframes arbp {

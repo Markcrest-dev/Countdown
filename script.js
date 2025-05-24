@@ -1,4 +1,4 @@
-const countDownDate = new Date("Aug 31, 2025 00:00:00").getTime();
+const countDownDate = new Date("Aug 22, 2025 00:00:00").getTime();
 
 function padNumber(number) {
   return number.toString().padStart(2, '0');
